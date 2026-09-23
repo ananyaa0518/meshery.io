@@ -4,10 +4,34 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="test" content="testing" />
     <!-- Google Tag Manager -->
-    <meta name="description" content="""
+    
+    <meta name="description" content="node-problem-detector aims to make various node problems visible to the upstream
+layers in the cluster management stack.
+It is a daemon that runs on each node, detects node
+problems and reports them to apiserver.
+
+node-problem-detector can either run as a
+[DaemonSet](https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/) or run standalone.
+Now it is running as a
+[Kubernetes Addon](https://github.com/kubernetes/kubernetes/tree/master/cluster/addons)
+enabled by default in the GKE cluster. It is also enabled by default in AKS as part of the
+[AKS Linux Extension](https://learn.microsoft.com/en-us/azure/aks/faq#what-is-the-purpose-of-the-aks-linux-extension-i-see-installed-on-my-linux-vmss-instances).
+
+
+There are tons of node problems that could possibly affect the pods running on the node, such as:
+
+Infrastructure daemon issues: ntp service down;
+Hardware issues: Bad CPU, memory or disk;
+Kernel issues: Kernel deadlock, corrupted file system;
+Container runtime issues: Unresponsive runtime daemon;
+...
+Currently, these problems are invisible to the upstream layers in the cluster management stack, so Kubernetes will continue scheduling pods to the bad nodes.
+
+To solve this problem, we introduced this new daemon node-problem-detector to collect node problems from various daemons and make them visible to the upstream layers. Once upstream layers have visibility to those problems, we can discuss the remedy system.
+
 " />
+    
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
@@ -15,9 +39,9 @@
     })(window,document,'script','dataLayer','GTM-KL6SSW5');</script>
     <!-- End Google Tag Manager -->
     <!-- Begin Jekyll SEO tag v2.9.0 -->
-<title>6482df99 27aa 4a51 9aab 92d2a2a9d0ca | Meshery</title>
+<title>Node Problem Detector | Meshery</title>
 <meta name="generator" content="Jekyll v4.4.1" />
-<meta property="og:title" content="6482df99 27aa 4a51 9aab 92d2a2a9d0ca" />
+<meta property="og:title" content="Node Problem Detector" />
 <meta name="author" content="The Meshery Authors" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="The extensible cloud native manager. Confidently wrangle cloud native infrastructure with Meshery." />
@@ -27,13 +51,13 @@
 <meta property="og:site_name" content="Meshery" />
 <meta property="og:image" content="https://meshery.io/assets/images/logos/service-mesh-pattern.svg" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2026-07-06T04:05:25+00:00" />
-<meta property="article:modified_time" content="2026-07-06T04:05:25+00:00" />
+<meta property="article:published_time" content="2026-09-23T18:13:14+00:00" />
+<meta property="article:modified_time" content="2026-09-23T18:13:14+00:00" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:image" content="https://meshery.io/assets/images/logos/service-mesh-pattern.svg" />
-<meta name="twitter:title" content="6482df99 27aa 4a51 9aab 92d2a2a9d0ca" />
+<meta name="twitter:title" content="Node Problem Detector" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"The Meshery Authors"},"dateModified":"2026-07-06T04:05:25+00:00","datePublished":"2026-07-06T04:05:25+00:00","description":"The extensible cloud native manager. Confidently wrangle cloud native infrastructure with Meshery.","headline":"6482df99 27aa 4a51 9aab 92d2a2a9d0ca","image":"https://meshery.io/assets/images/logos/service-mesh-pattern.svg","mainEntityOfPage":{"@type":"WebPage","@id":"https://meshery.io/catalog/workloads/node-problem-detector-6482df99-27aa-4a51-9aab-92d2a2a9d0ca.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://meshery.io/assets/images/logos/meshery-gradient.png"},"name":"The Meshery Authors"},"url":"https://meshery.io/catalog/workloads/node-problem-detector-6482df99-27aa-4a51-9aab-92d2a2a9d0ca.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"The Meshery Authors"},"dateModified":"2026-09-23T18:13:14+00:00","datePublished":"2026-09-23T18:13:14+00:00","description":"The extensible cloud native manager. Confidently wrangle cloud native infrastructure with Meshery.","headline":"Node Problem Detector","image":"https://meshery.io/assets/images/logos/service-mesh-pattern.svg","mainEntityOfPage":{"@type":"WebPage","@id":"https://meshery.io/catalog/workloads/node-problem-detector-6482df99-27aa-4a51-9aab-92d2a2a9d0ca.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://meshery.io/assets/images/logos/meshery-gradient.png"},"name":"The Meshery Authors"},"url":"https://meshery.io/catalog/workloads/node-problem-detector-6482df99-27aa-4a51-9aab-92d2a2a9d0ca.html"}</script>
 <!-- End Jekyll SEO tag -->
  <link type="application/atom+xml" rel="alternate" href="https://meshery.io/feed.xml" title="Meshery" /> 
     <link rel="stylesheet" href="/css/stellarnav.css" />
@@ -65,7 +89,6 @@
     
 
     <meta name="twitter:card" content="summary_large_image" />
-    <meta property="twitter:title" content="Meshery" />
     <meta name="twitter:site" content="@mesheryio" />
     <meta name="twitter:creator" content="@mesheryio" />
     <meta name="author" content="Meshery Authors">
@@ -91,13 +114,13 @@
         if (localStorage.getItem("mode") === "light-mode") {
           body.classList.remove("dark-mode");
     
-          let allLogos = document.querySelectorAll("#logo-dark-light");
+          let allLogos = document.querySelectorAll("#logo-dark-light, .logo-dark-light");
           allLogos.forEach(e => e.src = e.dataset.logoForLight);
         }
     
         // Automatically set logos based on initial theme
-        window.addEventListener('load', () => {
-          let allLogos = document.querySelectorAll("#logo-dark-light");
+        document.addEventListener('DOMContentLoaded', () => {
+          let allLogos = document.querySelectorAll("#logo-dark-light, .logo-dark-light");
           allLogos.forEach(e => {
             e.src = body.classList.contains("dark-mode") ? e.dataset.logoForDark : e.dataset.logoForLight;
           });
@@ -222,6 +245,8 @@
 							
 					
 							
+					
+							
 				<a href="/community
 "   class="nav-text"
 					>
@@ -319,9 +344,21 @@
 						<div  class="sub-nav-li" >
 								<img class="nav-img" src="/assets/images/nav-icons/Discuss.svg
 ">
-							<a href="/community#discussion-forums
+							<a href="https://discuss.meshery.io
 " 
 							class="subnav-item">Discussion forums
+							
+							</a>
+						</div>
+					</li>
+					
+					<li >
+						<div  class="sub-nav-li" >
+								<img class="nav-img" src="/assets/images/nav-icons/Leaderboard.svg
+">
+							<a href="/community/leaderboard
+" 
+							class="subnav-item">Leaderboard
 							
 							</a>
 						</div>
@@ -520,7 +557,7 @@
       <!-- 
         <div>
         <span class="pattern-type">
-          
+
           
           <a style="text-decoration: none; color: #333;" href="/catalog/workloads">workloads</a>
           
@@ -534,24 +571,38 @@
             <div>workloads</div>
           </li>
 
-          <li><p>UUID</p>
-            <div>6482df99-27aa-4a51-9aab-92d2a2a9d0ca</div>
-          </li>
+          <!-- <li><p>ID</p>
+            <div class="catalog-design-id">
+              <span class="catalog-design-id-value">6482df99-27aa-4a51-9aab-92d2a2a9d0ca</span>
+              <span class="catalog-design-id-copy-wrapper">
+                <button
+                  type="button"
+                  class="btn catalog-design-id-copy"
+                  data-clipboard-text="6482df99-27aa-4a51-9aab-92d2a2a9d0ca"
+                  aria-label="Copy design ID"
+                >
+                  <i class="far fa-copy" aria-hidden="true"></i>
+                </button>
+                <span class="copy-feedback" role="status"></span>
+              </span>
+            </div>
+          </li> -->
 
           <li><p>CREATED BY</p>
-            <div><a href="https://cloud.meshery.io/user/9222bde1-64c6-4fb2-971a-3402d5ae2fd9">Deepak Reddy</a></div>
+            <div><a href="https://cloud.meshery.io/user/6e718f76-a798-485f-b915-8d5cc8a2d97a">Deepak Reddy</a></div>
           </li>
-      
-          <li><p>UPDATED AT</p>
-            <div>July 06, 2026</div>
+
+          <li><p>CREATED AT</p>
+            <div>July 06, 2024</div>
           </li>
-    
+
           <li><p>VERSION</p>
             <div>0.0.10</div>
           </li>
           <li>
             <p>MODELS</p>
             <div>
+              
               
               
               <a href="/catalog/models/kubernetes">
@@ -567,12 +618,34 @@
     <div class="modal-image-single">
       <h4>Design Snapshot</h4>
       <img class="pattern-snapshot"
-      src="https://raw.githubusercontent.com/meshery-extensions/meshery-extensions-packages/master/action-assets/design-assets/6482df99-27aa-4a51-9aab-92d2a2a9d0ca-light.png" 
+      src="https://raw.githubusercontent.com/meshery-extensions/meshery-extensions-packages/master/action-assets/design-assets/6482df99-27aa-4a51-9aab-92d2a2a9d0ca-light.png"
       onerror="this.src='/assets/images/logos/service-mesh-pattern.svg'" loading="lazy" onclick="toggleFullScreenImage('6482df99-27aa-4a51-9aab-92d2a2a9d0ca-light')"/>
 
       <h4 class="related-patterns">Related Designs</h4>
       <!-- MINICARD-START -->
       <!-- more conditions will be needed to be added when more patterns are introduced.  -->
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
 
     
 
@@ -1268,12 +1341,43 @@
   <div>
     <h3>What This Design Does:</h3>
     
-      <p class="pre-white-space"><em>No description available.</em></p>
+      <p class="pre-white-space">node-problem-detector aims to make various node problems visible to the upstream
+layers in the cluster management stack.
+It is a daemon that runs on each node, detects node
+problems and reports them to apiserver.
+
+node-problem-detector can either run as a
+[DaemonSet](https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/) or run standalone.
+Now it is running as a
+[Kubernetes Addon](https://github.com/kubernetes/kubernetes/tree/master/cluster/addons)
+enabled by default in the GKE cluster. It is also enabled by default in AKS as part of the
+[AKS Linux Extension](https://learn.microsoft.com/en-us/azure/aks/faq#what-is-the-purpose-of-the-aks-linux-extension-i-see-installed-on-my-linux-vmss-instances).
+
+
+There are tons of node problems that could possibly affect the pods running on the node, such as:
+
+Infrastructure daemon issues: ntp service down;
+Hardware issues: Bad CPU, memory or disk;
+Kernel issues: Kernel deadlock, corrupted file system;
+Container runtime issues: Unresponsive runtime daemon;
+...
+Currently, these problems are invisible to the upstream layers in the cluster management stack, so Kubernetes will continue scheduling pods to the bad nodes.
+
+To solve this problem, we introduced this new daemon node-problem-detector to collect node problems from various daemons and make them visible to the upstream layers. Once upstream layers have visibility to those problems, we can discuss the remedy system.
+
+</p>
     
+
     <h3>Caveats and Consideration:</h3>
     
-      <p class="pre-white-space"><em>No description available.</em></p>
+      <p class="pre-white-space">node-problem-detector uses Event and NodeCondition to report problems to apiserver.
+
+NodeCondition: Permanent problem that makes the node unavailable for pods should be reported as NodeCondition.
+Event: Temporary problem that has limited impact on pod but is informative should be reported as Event.
+For more Caveats And Considerations checkout this https://github.com/kubernetes/node-problem-detector
+</p>
     
+
     <h3>Compatibility:</h3>
       <br />
           <style>
@@ -1282,6 +1386,7 @@
         }
     </style>
     <div class="comatibility-grid">
+    
     
     
     <a href="/catalog/models/kubernetes">
@@ -1307,7 +1412,7 @@
         
         <a href="https://playground.meshery.io/extension/meshmap?mode=design&type=catalog&id=6482df99-27aa-4a51-9aab-92d2a2a9d0ca&name=Node Problem Detector"
           target="_blank">
-          <button class="import" style="width: 15rem;">Open in Playground </button>
+          <button class="import import-brand-primary" style="width: 15rem;">Open in Playground </button>
         </a>
         
 
@@ -1315,7 +1420,7 @@
         
         <a href="/catalog/6482df99-27aa-4a51-9aab-92d2a2a9d0ca/0.0.10/design.yml" download="Node Problem Detector.yml">
           <button id="resourceDownloadBtn" data-patternId="6482df99-27aa-4a51-9aab-92d2a2a9d0ca" onclick="sendCloudTelemetry()"
-            class="import" style="width: 7rem;">
+            class="import import-brand-secondary" style="width: 7rem;">
             Download
           </button>
         </a>
@@ -1323,7 +1428,7 @@
         <div class="btn-tooltip-grp">
           <a class="btn tooltip-modal" data-clipboard-target="#copy-url" data-clipboard-text="https://raw.githubusercontent.com/meshery/meshery.io/master/catalog/6482df99-27aa-4a51-9aab-92d2a2a9d0ca/0.0.10/design.yml"
             onmouseout="resetCopyText(this)">
-            <button class="import" style="width: 7rem;">Copy URL
+            <button class="import import-brand-tertiary" style="width: 7rem;">Copy URL
             </button>
           </a>
         </div>
@@ -1347,14 +1452,11 @@
 
 </script>
     </div>
-    
+
   </div>
   
 </div>
 
-<script>
-  document.title = "Node Problem Detector | Meshery Catalog";
-</script>
 <script src="/assets/js/thumbnail-clickable.js"></script>
 `
 
@@ -1363,6 +1465,50 @@
 		
         
         
+        <!-- <p  style= "font-size:20px;"> 
+           
+        </p> -->
+       
+        <!-- <p  style= "font-size:20px;"> 
+           
+        </p> -->
+       
+        <!-- <p  style= "font-size:20px;"> 
+           
+        </p> -->
+       
+        <!-- <p  style= "font-size:20px;"> 
+           
+        </p> -->
+       
+        <!-- <p  style= "font-size:20px;"> 
+           
+        </p> -->
+       
+        <!-- <p  style= "font-size:20px;"> 
+           
+        </p> -->
+       
+        <!-- <p  style= "font-size:20px;"> 
+           
+        </p> -->
+       
+        <!-- <p  style= "font-size:20px;"> 
+           
+        </p> -->
+       
+        <!-- <p  style= "font-size:20px;"> 
+           
+        </p> -->
+       
+        <!-- <p  style= "font-size:20px;"> 
+           
+        </p> -->
+       
+        <!-- <p  style= "font-size:20px;"> 
+           
+        </p> -->
+       
         <!-- <p  style= "font-size:20px;"> 
            
         </p> -->
@@ -2793,7 +2939,7 @@
 				<li>
 					<h2>
 						
-						<a target="_blank"  
+						<a target="_blank" 
 						href="/community
 " class="community-icon" >
 						
@@ -2849,7 +2995,7 @@
 						Internships</a></li>
 				
 				<li><a target="_blank" 
-						href="/community#discussion-forums
+						href="https://discuss.meshery.io
 " class="forum-icon" >
 						
 						
@@ -2865,7 +3011,7 @@
 				<li>
 					<h2>
 						
-						<a  
+						<a 
 						href="/#getting-started
 " >
 						
@@ -2903,7 +3049,7 @@
 				<li>
 					<h2>
 						
-						<a  
+						<a 
 						href="/community#resources
 " >
 						
@@ -3038,7 +3184,7 @@
 			</ul>
 			
 
-			<!-- 
+			<!--
 			<ul class="feed">
 				<a class="twitter-timeline" data-width="320" data-height="320" data-theme="light"
 					data-link-color="#62ACCD" href="https://twitter.com/mesheryio"
@@ -3079,6 +3225,27 @@
 
 <script>
 
+    // Functionality for the copy button next to the ID/UUID in Catalog Details
+
+	// function showCopyFeedback(element, message) {
+	// 	let wrapper = element.closest('.catalog-design-id-copy-wrapper');
+	// 	if (!wrapper) {
+	// 		return false;
+	// 	}
+
+	// 	let feedback = wrapper.querySelector('.copy-feedback');
+	// 	if (!feedback) {
+	// 		return false;
+	// 	}
+
+	// 	feedback.textContent = message;
+	// 	window.clearTimeout(element.copyFeedbackTimeout);
+	// 	element.copyFeedbackTimeout = window.setTimeout(function () {
+	// 		feedback.textContent = '';
+	// 	}, 1500);
+	// 	return true;
+	// }
+
 	function resetCopyText(element) {
 		let childElements = element.childNodes
 		if (childElements.length > 3) {
@@ -3097,18 +3264,23 @@
 		console.info('Text:', e.text);
 		console.info('Trigger:', e.trigger);
 		let childElements = e.trigger.childNodes;
-		if (childElements.length > 3) {
-		childElements[3].innerHTML = "Copied!";
-	} else {
-		childElements[1].innerHTML = "Copied";
-		childElements[1].style.color = 'white';
-		childElements[1].style.background = "#1a2421";
-	}
+        // ShowCopyFeedback serves as the primary check for the copy button in Catalog Details.
+        // If the copy button is enabled again, the conditional below needs to be encapsulate the childElements conditional
+		// if (!showCopyFeedback(e.trigger, "Copied!")) {}
+
+        if (childElements.length > 3) {
+			childElements[3].innerHTML = "Copied!";
+		} else {
+			childElements[1].innerHTML = "Copied";
+			childElements[1].style.color = 'white';
+			childElements[1].style.background = "#1a2421";
+		}
 		e.clearSelection();
 	});
 	clipboard.on('error', function (e) {
 		console.error('Action:', e.action);
 		console.error('Trigger:', e.trigger);
+		// showCopyFeedback(e.trigger, "Copy failed");
 	});
 </script>
 
@@ -3116,6 +3288,7 @@
 	function displayCode(id) {
 		var divId = id + "_code";
 		var element = document.getElementById(divId);
+		var isOpening = !element.classList.contains("showDiv");
 		element.classList.toggle("showDiv");
 		var toggleDivs = document.getElementsByClassName("toggle");
 		if (element.style.maxHeight) {
@@ -3131,12 +3304,16 @@
 				}
 			}
 		}
+		var platformOptions = document.querySelectorAll(".platform-option");
+		platformOptions.forEach(function(option) {
+			option.classList.toggle("selected", option.id === id && isOpening);
+		});
 	}
 </script>
 <script type="text/javascript">
 	let toggleBtn = document.getElementById("mode-toggle-btn")
 	toggleBtn.onclick = setMode;
-	
+
 	if (localStorage.getItem("mode") === null) {
     	localStorage.setItem("mode", "dark-mode");
     }
@@ -3145,18 +3322,23 @@
 	const currentMode = localStorage.getItem("mode");
 	if (isDark ^ (currentMode === "dark-mode")) {
 		setMode();
+	} else {
+		// Body already matches the stored theme, so setMode() is not called here.
+		// Sync every theme-aware logo to the current theme so logos that render
+		// after the header script (such as #l5-logo) show the correct image on
+		// load instead of waiting for a manual toggle.
+		document.querySelectorAll("#logo-dark-light, .logo-dark-light").forEach(e => {
+			e.src = document.body.classList.contains("dark-mode") ? e.dataset.logoForDark : e.dataset.logoForLight;
+		});
 	}
 
 	function setMode() {
 		document.body.classList.toggle("dark-mode")
-		
-		let l5Logos = document.querySelectorAll("#l5-logo");
-		let allLogos = document.querySelectorAll("#logo-dark-light");
+
+		let allLogos = document.querySelectorAll("#logo-dark-light, .logo-dark-light");
 		if (document.body.classList.contains("dark-mode")) {
-			l5Logos.forEach(e => e.src = '../assets/images/company-logo/dark-mode-logo.svg')
 			allLogos.forEach(e => e.src = e.dataset.logoForDark)
 		} else {
-			l5Logos.forEach(e => e.src = '../assets/images/company-logo/no-trim.svg')
 			allLogos.forEach(e => e.src = e.dataset.logoForLight)
 		}
 		if (document.body.classList.contains("dark-mode")) {
@@ -3169,7 +3351,7 @@
 			bubbles: true ,
 		}))
 	}
-	
+
 </script>
 
 <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
@@ -3186,7 +3368,7 @@
       slidesToScroll: 1,
       autoplay: true, // true
       autoplaySpeed: 1500,
-      
+
 
       responsive: [
         {

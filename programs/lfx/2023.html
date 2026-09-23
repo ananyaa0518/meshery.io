@@ -4,9 +4,8 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="test" content="testing" />
     <!-- Google Tag Manager -->
-    <meta name="description" content="" />
+    
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
@@ -26,13 +25,13 @@
 <meta property="og:site_name" content="Meshery" />
 <meta property="og:image" content="https://meshery.io/assets/assets/images/programs/lfx-icon-white.svg" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2026-07-06T04:05:25+00:00" />
-<meta property="article:modified_time" content="2026-07-06T04:05:25+00:00" />
+<meta property="article:published_time" content="2026-09-23T18:13:14+00:00" />
+<meta property="article:modified_time" content="2026-09-23T18:13:14+00:00" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:image" content="https://meshery.io/assets/assets/images/programs/lfx-icon-white.svg" />
 <meta name="twitter:title" content="Meshery LFX 2023" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"The Meshery Authors"},"dateModified":"2026-07-06T04:05:25+00:00","datePublished":"2026-07-06T04:05:25+00:00","description":"Meshery’s participation in LFX internship program for 2023","headline":"Meshery LFX 2023","image":{"thumbnail":"/assets/assets/images/programs/lfx-icon-white.svg","url":"https://meshery.io/assets/assets/images/programs/lfx-icon-white.svg","@type":"imageObject"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://meshery.io/programs/lfx/2023"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://meshery.io/assets/images/logos/meshery-gradient.png"},"name":"The Meshery Authors"},"url":"https://meshery.io/programs/lfx/2023"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"The Meshery Authors"},"dateModified":"2026-09-23T18:13:14+00:00","datePublished":"2026-09-23T18:13:14+00:00","description":"Meshery’s participation in LFX internship program for 2023","headline":"Meshery LFX 2023","image":{"thumbnail":"/assets/assets/images/programs/lfx-icon-white.svg","url":"https://meshery.io/assets/assets/images/programs/lfx-icon-white.svg","@type":"imageObject"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://meshery.io/programs/lfx/2023"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://meshery.io/assets/images/logos/meshery-gradient.png"},"name":"The Meshery Authors"},"url":"https://meshery.io/programs/lfx/2023"}</script>
 <!-- End Jekyll SEO tag -->
  <link type="application/atom+xml" rel="alternate" href="https://meshery.io/feed.xml" title="Meshery" /> 
     <link rel="stylesheet" href="/css/stellarnav.css" />
@@ -66,7 +65,6 @@
     
 
     <meta name="twitter:card" content="summary_large_image" />
-    <meta property="twitter:title" content="Meshery" />
     <meta name="twitter:site" content="@mesheryio" />
     <meta name="twitter:creator" content="@mesheryio" />
     <meta name="author" content="Meshery Authors">
@@ -92,13 +90,13 @@
         if (localStorage.getItem("mode") === "light-mode") {
           body.classList.remove("dark-mode");
     
-          let allLogos = document.querySelectorAll("#logo-dark-light");
+          let allLogos = document.querySelectorAll("#logo-dark-light, .logo-dark-light");
           allLogos.forEach(e => e.src = e.dataset.logoForLight);
         }
     
         // Automatically set logos based on initial theme
-        window.addEventListener('load', () => {
-          let allLogos = document.querySelectorAll("#logo-dark-light");
+        document.addEventListener('DOMContentLoaded', () => {
+          let allLogos = document.querySelectorAll("#logo-dark-light, .logo-dark-light");
           allLogos.forEach(e => {
             e.src = body.classList.contains("dark-mode") ? e.dataset.logoForDark : e.dataset.logoForLight;
           });
@@ -223,6 +221,8 @@
 							
 					
 							
+					
+							
 				<a href="/community
 "   class="nav-text"
 					>
@@ -320,9 +320,21 @@
 						<div  class="sub-nav-li" >
 								<img class="nav-img" src="/assets/images/nav-icons/Discuss.svg
 ">
-							<a href="/community#discussion-forums
+							<a href="https://discuss.meshery.io
 " 
 							class="subnav-item">Discussion forums
+							
+							</a>
+						</div>
+					</li>
+					
+					<li >
+						<div  class="sub-nav-li" >
+								<img class="nav-img" src="/assets/images/nav-icons/Leaderboard.svg
+">
+							<a href="/community/leaderboard
+" 
+							class="subnav-item">Leaderboard
 							
 							</a>
 						</div>
@@ -509,9 +521,11 @@
                 
 
                 
-                <p><span class="sub_headings">Description:</span></p>
-                <p class="program-p">Integrate a new architectural component into Meshery: a workflow engine. This project involves shifting Meshery off of bitcask and off of sqlite over to postgres using gorm (golang). Interns will familiarize with concepts of orchestration engines, including chaining workflows, and content lifecycle management.
-</p>
+                <h4 class="project-list"><span class="sub_headings">Description:</span></h4>
+                <div class="program-p">
+                    <p>Integrate a new architectural component into Meshery: a workflow engine. This project involves shifting Meshery off of bitcask and off of sqlite over to postgres using gorm (golang). Interns will familiarize with concepts of orchestration engines, including chaining workflows, and content lifecycle management.</p>
+
+                </div>
                 
 
                 
@@ -537,13 +551,13 @@
                 <h4 class="project-list"><span class="sub_headings">Mentors:</span></h4>
                 <ul>
                     
-                    <li style="padding-bottom: 1rem">
+                    <li>
                         
                         <a href="https://github.com/leecalcote">Lee Calcote</a>
                         
                     </li>
                     
-                    <li style="padding-bottom: 1rem">
+                    <li>
                         
                         <a href="">Ashish Tiwari</a>
                         
@@ -563,9 +577,11 @@
                 
 
                 
-                <p><span class="sub_headings">Description:</span></p>
-                <p class="program-p">Advance the cloud native playground in which any CNCF project can be explored. Meshery’s genesis is that of helping teach people about cloud native technology and enabling to operate various types of cloud native infrastructure confidently. The proposed project is aimed at furthering this mission by infusing multi-user collaboration as a pervasisve feature so that users can learn together in a running instance of Meshery.
-</p>
+                <h4 class="project-list"><span class="sub_headings">Description:</span></h4>
+                <div class="program-p">
+                    <p>Advance the cloud native playground in which any CNCF project can be explored. Meshery’s genesis is that of helping teach people about cloud native technology and enabling to operate various types of cloud native infrastructure confidently. The proposed project is aimed at furthering this mission by infusing multi-user collaboration as a pervasisve feature so that users can learn together in a running instance of Meshery.</p>
+
+                </div>
                 
 
                 
@@ -591,13 +607,13 @@
                 <h4 class="project-list"><span class="sub_headings">Mentors:</span></h4>
                 <ul>
                     
-                    <li style="padding-bottom: 1rem">
+                    <li>
                         
                         <a href="https://github.com/leecalcote">Lee Calcote</a>
                         
                     </li>
                     
-                    <li style="padding-bottom: 1rem">
+                    <li>
                         
                         <a href="https://github.com/Abhishek-kumar09">Abhishek Kumar</a>
                         
@@ -617,9 +633,11 @@
                 
 
                 
-                <p><span class="sub_headings">Description:</span></p>
-                <p class="program-p">Meshery's highly dynamic infrastructure configuration capabilities require real-time evaluation of complex policies. Policies of various types and with a high number of parameters need to be evaluated client-side. With policies expressed in Rego, the goal of this project is to incorporate use of the https://github.com/open-policy-agent/golang-opa-wasm project into Meshery UI, so that a powerful, real-time user experience is possible.
-</p>
+                <h4 class="project-list"><span class="sub_headings">Description:</span></h4>
+                <div class="program-p">
+                    <p>Meshery’s highly dynamic infrastructure configuration capabilities require real-time evaluation of complex policies. Policies of various types and with a high number of parameters need to be evaluated client-side. With policies expressed in Rego, the goal of this project is to incorporate use of the https://github.com/open-policy-agent/golang-opa-wasm project into Meshery UI, so that a powerful, real-time user experience is possible.</p>
+
+                </div>
                 
 
                 
@@ -645,13 +663,13 @@
                 <h4 class="project-list"><span class="sub_headings">Mentors:</span></h4>
                 <ul>
                     
-                    <li style="padding-bottom: 1rem">
+                    <li>
                         
                         <a href="https://github.com/leecalcote">Lee Calcote</a>
                         
                     </li>
                     
-                    <li style="padding-bottom: 1rem">
+                    <li>
                         
                         <a href="">Ashish Tiwari</a>
                         
@@ -671,11 +689,13 @@
                 
 
                 
-                <p><span class="sub_headings">Description:</span></p>
-                <p class="program-p">The adaptive load controller is to execute optimization routines recursively to determine the maximum load a system can sustain. The maximum load is usually defined by the maximum requests per second (rps) the system can handle. The metrics (CPU usage, latency etc) collected from the system under test are the constraints we provide to judge whether a system under test (SUT) is sustaining the load.
+                <h4 class="project-list"><span class="sub_headings">Description:</span></h4>
+                <div class="program-p">
+                    <p>The adaptive load controller is to execute optimization routines recursively to determine the maximum load a system can sustain. The maximum load is usually defined by the maximum requests per second (rps) the system can handle. The metrics (CPU usage, latency etc) collected from the system under test are the constraints we provide to judge whether a system under test (SUT) is sustaining the load.</p>
 
-A use-case that fits very well is be the ability to use it to run performance tests on a schedule and track the maximum load a system can handle over time. This could give insights to performance improvements or degradations.
-</p>
+<p>A use-case that fits very well is be the ability to use it to run performance tests on a schedule and track the maximum load a system can handle over time. This could give insights to performance improvements or degradations.</p>
+
+                </div>
                 
 
                 
@@ -703,13 +723,13 @@ A use-case that fits very well is be the ability to use it to run performance te
                 <h4 class="project-list"><span class="sub_headings">Mentors:</span></h4>
                 <ul>
                     
-                    <li style="padding-bottom: 1rem">
+                    <li>
                         
                         <a href="https://github.com/leecalcote">Lee Calcote</a>
                         
                     </li>
                     
-                    <li style="padding-bottom: 1rem">
+                    <li>
                         
                         <a href="">Xin Huang</a>
                         
@@ -729,9 +749,11 @@ A use-case that fits very well is be the ability to use it to run performance te
                 
 
                 
-                <p><span class="sub_headings">Description:</span></p>
-                <p class="program-p">Network topologies and graph databases go hand-in-hand. The OpenAPI specifications for Kubernetes provides taxonomy, but augmenting a graph data model with formalized ontologies enables any number of capabilities, one of the more straightforward is the inferencing requisite for natural language processing, and consequently, a human-centric query / response interaction becomes becomes possible. More importantly, more advanced systems can be built when a graph data model of connected systems is upgraded to be a knowledge semantic graph. Deliverables (among other items):
-</p>
+                <h4 class="project-list"><span class="sub_headings">Description:</span></h4>
+                <div class="program-p">
+                    <p>Network topologies and graph databases go hand-in-hand. The OpenAPI specifications for Kubernetes provides taxonomy, but augmenting a graph data model with formalized ontologies enables any number of capabilities, one of the more straightforward is the inferencing requisite for natural language processing, and consequently, a human-centric query / response interaction becomes becomes possible. More importantly, more advanced systems can be built when a graph data model of connected systems is upgraded to be a knowledge semantic graph. Deliverables (among other items):</p>
+
+                </div>
                 
 
                 
@@ -768,7 +790,7 @@ A use-case that fits very well is be the ability to use it to run performance te
                 <h4 class="project-list"><span class="sub_headings">Mentors:</span></h4>
                 <ul>
                     
-                    <li style="padding-bottom: 1rem">
+                    <li>
                         
                         <a href="https://github.com/leecalcote">Lee Calcote</a>
                         
@@ -792,9 +814,11 @@ A use-case that fits very well is be the ability to use it to run performance te
                 
 
                 
-                <p><span class="sub_headings">Description:</span></p>
-                <p class="program-p">Meshery UI lacks a permissions framework. The existing internal implementation is simple, fragile and must be completely rewritten. The approach to implemention a permmissions framework includes using React.js and CASL.js. Meshery UI's approach needs to be extensible given that this framework will be an extension point for Remote Providers to supply their own permissions.
-</p>
+                <h4 class="project-list"><span class="sub_headings">Description:</span></h4>
+                <div class="program-p">
+                    <p>Meshery UI lacks a permissions framework. The existing internal implementation is simple, fragile and must be completely rewritten. The approach to implemention a permmissions framework includes using React.js and CASL.js. Meshery UI’s approach needs to be extensible given that this framework will be an extension point for Remote Providers to supply their own permissions.</p>
+
+                </div>
                 
 
                 
@@ -825,13 +849,13 @@ A use-case that fits very well is be the ability to use it to run performance te
                 <h4 class="project-list"><span class="sub_headings">Mentors:</span></h4>
                 <ul>
                     
-                    <li style="padding-bottom: 1rem">
+                    <li>
                         
                         <a href="https://github.com/leecalcote">Lee Calcote</a>
                         
                     </li>
                     
-                    <li style="padding-bottom: 1rem">
+                    <li>
                         
                         <a href="">Abhishek Kumar</a>
                         
@@ -851,9 +875,11 @@ A use-case that fits very well is be the ability to use it to run performance te
                 
 
                 
-                <p><span class="sub_headings">Description:</span></p>
-                <p class="program-p">Meshery's highly dynamic infrastructure configuration capabilities require real-time evaluation of complex policies. Policies of various types and with a high number of parameters need to be evaluted client-side. With policies expressed in Rego, the goal of this project is to incorporate use of the https://github.com/open-policy-agent/golang-opa-wasm project into Meshery UI.
-</p>
+                <h4 class="project-list"><span class="sub_headings">Description:</span></h4>
+                <div class="program-p">
+                    <p>Meshery’s highly dynamic infrastructure configuration capabilities require real-time evaluation of complex policies. Policies of various types and with a high number of parameters need to be evaluted client-side. With policies expressed in Rego, the goal of this project is to incorporate use of the https://github.com/open-policy-agent/golang-opa-wasm project into Meshery UI.</p>
+
+                </div>
                 
 
                 
@@ -886,13 +912,13 @@ A use-case that fits very well is be the ability to use it to run performance te
                 <h4 class="project-list"><span class="sub_headings">Mentors:</span></h4>
                 <ul>
                     
-                    <li style="padding-bottom: 1rem">
+                    <li>
                         
                         <a href="https://github.com/leecalcote">Lee Calcote</a>
                         
                     </li>
                     
-                    <li style="padding-bottom: 1rem">
+                    <li>
                         
                         <a href="">Abhishek Kumar</a>
                         
@@ -912,9 +938,11 @@ A use-case that fits very well is be the ability to use it to run performance te
                 
 
                 
-                <p><span class="sub_headings">Description:</span></p>
-                <p class="program-p">Meshery MeshModels represent a schema-based description of cloud native infratructure. MeshModels need to be portable between Meshery deployments as well as easily versionable in external repositories
-</p>
+                <h4 class="project-list"><span class="sub_headings">Description:</span></h4>
+                <div class="program-p">
+                    <p>Meshery MeshModels represent a schema-based description of cloud native infratructure. MeshModels need to be portable between Meshery deployments as well as easily versionable in external repositories</p>
+
+                </div>
                 
 
                 
@@ -953,7 +981,7 @@ A use-case that fits very well is be the ability to use it to run performance te
                 <h4 class="project-list"><span class="sub_headings">Mentors:</span></h4>
                 <ul>
                     
-                    <li style="padding-bottom: 1rem">
+                    <li>
                         
                         <a href="https://github.com/leecalcote">Lee Calcote</a>
                         
@@ -973,9 +1001,11 @@ A use-case that fits very well is be the ability to use it to run performance te
                 
 
                 
-                <p><span class="sub_headings">Description:</span></p>
-                <p class="program-p">Network topologies and graph databases go hand-in-hand. The OpenAPI specifications for Kubernetes provides taxonomy, but augmenting a graph data model with formalized ontologies enables any number of capabilities, one of the more straightforward is the inferencing requisite for natural language processing, and consequently, a human-centric query / response interaction becomes becomes possible. More importantly, more advanced systems can be built when a graph data model of connected systems is upgraded to be a knowledge semantic graph. Deliverables (among other items):
-</p>
+                <h4 class="project-list"><span class="sub_headings">Description:</span></h4>
+                <div class="program-p">
+                    <p>Network topologies and graph databases go hand-in-hand. The OpenAPI specifications for Kubernetes provides taxonomy, but augmenting a graph data model with formalized ontologies enables any number of capabilities, one of the more straightforward is the inferencing requisite for natural language processing, and consequently, a human-centric query / response interaction becomes becomes possible. More importantly, more advanced systems can be built when a graph data model of connected systems is upgraded to be a knowledge semantic graph. Deliverables (among other items):</p>
+
+                </div>
                 
 
                 
@@ -1012,13 +1042,13 @@ A use-case that fits very well is be the ability to use it to run performance te
                 <h4 class="project-list"><span class="sub_headings">Mentors:</span></h4>
                 <ul>
                     
-                    <li style="padding-bottom: 1rem">
+                    <li>
                         
                         <a href="https://github.com/leecalcote">Lee Calcote</a>
                         
                     </li>
                     
-                    <li style="padding-bottom: 1rem">
+                    <li>
                         
                         <a href="">Xin Huang</a>
                         
@@ -1038,9 +1068,11 @@ A use-case that fits very well is be the ability to use it to run performance te
                 
 
                 
-                <p><span class="sub_headings">Description:</span></p>
-                <p class="program-p">The objective of this project is to develop IDE plugins that can enhance the developer experience while working with Service Mesh Performance Performance Profiles. The proposed plugins will leverage technologies such as golang and cuelang to provide features such as syntax highlighting, auto-completion, validation, and rendering previews for Service Mesh Performance profile and model definitions.
-</p>
+                <h4 class="project-list"><span class="sub_headings">Description:</span></h4>
+                <div class="program-p">
+                    <p>The objective of this project is to develop IDE plugins that can enhance the developer experience while working with Service Mesh Performance Performance Profiles. The proposed plugins will leverage technologies such as golang and cuelang to provide features such as syntax highlighting, auto-completion, validation, and rendering previews for Service Mesh Performance profile and model definitions.</p>
+
+                </div>
                 
 
                 
@@ -1075,13 +1107,13 @@ A use-case that fits very well is be the ability to use it to run performance te
                 <h4 class="project-list"><span class="sub_headings">Mentors:</span></h4>
                 <ul>
                     
-                    <li style="padding-bottom: 1rem">
+                    <li>
                         
                         <a href="https://github.com/leecalcote">Lee Calcote</a>
                         
                     </li>
                     
-                    <li style="padding-bottom: 1rem">
+                    <li>
                         
                         <a href="">Xin Huang</a>
                         
@@ -1098,44 +1130,50 @@ A use-case that fits very well is be the ability to use it to run performance te
         </div>
 
         
-        <h3 class="cohort_title" id="timeline">Linux Foundation 2023 Program Timeline</h3>
+        <h3 class="cohort_title" id="timeline"><span class="sub_headings">Linux Foundation 2023 Program Timeline</span></h3>
         <div class="program">
             <div class="community-details">
-                <p><span class="sub_headings">Full-Time Terms:</span></p>
+                <h4 class="section-title"><span class="sub_headings">Full-Time Terms:</span></h4>
 
             
-            <h4>Spring Term: March 1st - May 31st</h4>
-            <ul class="gsoc">
-                
-                <li>mentorships available on LFX Mentorship: Jan 15th, 2023</li>
-                
-                <li>applications open: Jan 15th - Feb 12th (4 weeks)</li>
-                
-                <li>application review/admission decisions/HR paperwork: Feb 15th - Feb 26th</li>
-                
-            </ul>
+            <div class="timeline-section">
+                <h4>Spring Term: March 1st - May 31st</h4>
+                <ul class="gsoc">
+                    
+                    <li>mentorships available on LFX Mentorship: Jan 15th, 2023</li>
+                    
+                    <li>applications open: Jan 15th - Feb 12th (4 weeks)</li>
+                    
+                    <li>application review/admission decisions/HR paperwork: Feb 15th - Feb 26th</li>
+                    
+                </ul>
+            </div>
             
-            <h4>Summer Term: June 1st - August 31st</h4>
-            <ul class="gsoc">
-                
-                <li>mentorships available on LFX Mentorship: April 15th, 2023</li>
-                
-                <li>applications open: May 10th - May 23rd (2 weeks)</li>
-                
-                <li>application review/admission decisions/HR paperwork: May 24th - May 29th</li>
-                
-            </ul>
+            <div class="timeline-section">
+                <h4>Summer Term: June 1st - August 31st</h4>
+                <ul class="gsoc">
+                    
+                    <li>mentorships available on LFX Mentorship: April 15th, 2023</li>
+                    
+                    <li>applications open: May 10th - May 23rd (2 weeks)</li>
+                    
+                    <li>application review/admission decisions/HR paperwork: May 24th - May 29th</li>
+                    
+                </ul>
+            </div>
             
-            <h4>Fall Term: September 1st - Nov 30th</h4>
-            <ul class="gsoc">
-                
-                <li>mentorships available on LFX Mentorship: July 15th, 2023</li>
-                
-                <li>applications open: August 12th (4 weeks)</li>
-                
-                <li>application review/admission decisions/HR paperwork: August 12th - August 31st</li>
-                
-            </ul>
+            <div class="timeline-section">
+                <h4>Fall Term: September 1st - Nov 30th</h4>
+                <ul class="gsoc">
+                    
+                    <li>mentorships available on LFX Mentorship: July 15th, 2023</li>
+                    
+                    <li>applications open: August 12th (4 weeks)</li>
+                    
+                    <li>application review/admission decisions/HR paperwork: August 12th - August 31st</li>
+                    
+                </ul>
+            </div>
             
 
             
@@ -1180,7 +1218,7 @@ We interact daily over Slack, and have an open source project meeting everyday, 
 </div>
 <a id="button-scroll-to-up" style="text-decoration: none; color: var(--color-white);"></a>
 
-<div class="text subscribe program__subscribe">
+<div class="text subscribe program__subscribe lfx-subscribe">
      
  <!--   Mailing List -->
   <h2 class="font-bold heading">Mailing Lists and Discussion Forum</h2>
@@ -1288,11 +1326,11 @@ We interact daily over Slack, and have an open source project meeting everyday, 
           <h3 class="h3">Discussion Forum</h3>
         </div>
         <div>
-          <a class="button" href="/community#discussion-forums">Engage</a>
+          <a class="button" href="https://discuss.meshery.io">Engage</a>
         </div>
       </div>
       <div class="mailing-container mail-link-div">
-        <a class="mail-link saffron" href="/community#discussion-forums"
+        <a class="mail-link saffron" href="https://discuss.meshery.io"
           >Questions and answers about Meshery
         </a>
       </div>
@@ -1313,7 +1351,7 @@ We interact daily over Slack, and have an open source project meeting everyday, 
 				<li>
 					<h2>
 						
-						<a target="_blank"  
+						<a target="_blank" 
 						href="/community
 " class="community-icon" >
 						
@@ -1369,7 +1407,7 @@ We interact daily over Slack, and have an open source project meeting everyday, 
 						Internships</a></li>
 				
 				<li><a target="_blank" 
-						href="/community#discussion-forums
+						href="https://discuss.meshery.io
 " class="forum-icon" >
 						
 						
@@ -1385,7 +1423,7 @@ We interact daily over Slack, and have an open source project meeting everyday, 
 				<li>
 					<h2>
 						
-						<a  
+						<a 
 						href="/#getting-started
 " >
 						
@@ -1423,7 +1461,7 @@ We interact daily over Slack, and have an open source project meeting everyday, 
 				<li>
 					<h2>
 						
-						<a  
+						<a 
 						href="/community#resources
 " >
 						
@@ -1558,7 +1596,7 @@ We interact daily over Slack, and have an open source project meeting everyday, 
 			</ul>
 			
 
-			<!-- 
+			<!--
 			<ul class="feed">
 				<a class="twitter-timeline" data-width="320" data-height="320" data-theme="light"
 					data-link-color="#62ACCD" href="https://twitter.com/mesheryio"
@@ -1603,6 +1641,27 @@ We interact daily over Slack, and have an open source project meeting everyday, 
 
 <script>
 
+    // Functionality for the copy button next to the ID/UUID in Catalog Details
+
+	// function showCopyFeedback(element, message) {
+	// 	let wrapper = element.closest('.catalog-design-id-copy-wrapper');
+	// 	if (!wrapper) {
+	// 		return false;
+	// 	}
+
+	// 	let feedback = wrapper.querySelector('.copy-feedback');
+	// 	if (!feedback) {
+	// 		return false;
+	// 	}
+
+	// 	feedback.textContent = message;
+	// 	window.clearTimeout(element.copyFeedbackTimeout);
+	// 	element.copyFeedbackTimeout = window.setTimeout(function () {
+	// 		feedback.textContent = '';
+	// 	}, 1500);
+	// 	return true;
+	// }
+
 	function resetCopyText(element) {
 		let childElements = element.childNodes
 		if (childElements.length > 3) {
@@ -1621,18 +1680,23 @@ We interact daily over Slack, and have an open source project meeting everyday, 
 		console.info('Text:', e.text);
 		console.info('Trigger:', e.trigger);
 		let childElements = e.trigger.childNodes;
-		if (childElements.length > 3) {
-		childElements[3].innerHTML = "Copied!";
-	} else {
-		childElements[1].innerHTML = "Copied";
-		childElements[1].style.color = 'white';
-		childElements[1].style.background = "#1a2421";
-	}
+        // ShowCopyFeedback serves as the primary check for the copy button in Catalog Details.
+        // If the copy button is enabled again, the conditional below needs to be encapsulate the childElements conditional
+		// if (!showCopyFeedback(e.trigger, "Copied!")) {}
+
+        if (childElements.length > 3) {
+			childElements[3].innerHTML = "Copied!";
+		} else {
+			childElements[1].innerHTML = "Copied";
+			childElements[1].style.color = 'white';
+			childElements[1].style.background = "#1a2421";
+		}
 		e.clearSelection();
 	});
 	clipboard.on('error', function (e) {
 		console.error('Action:', e.action);
 		console.error('Trigger:', e.trigger);
+		// showCopyFeedback(e.trigger, "Copy failed");
 	});
 </script>
 
@@ -1640,6 +1704,7 @@ We interact daily over Slack, and have an open source project meeting everyday, 
 	function displayCode(id) {
 		var divId = id + "_code";
 		var element = document.getElementById(divId);
+		var isOpening = !element.classList.contains("showDiv");
 		element.classList.toggle("showDiv");
 		var toggleDivs = document.getElementsByClassName("toggle");
 		if (element.style.maxHeight) {
@@ -1655,12 +1720,16 @@ We interact daily over Slack, and have an open source project meeting everyday, 
 				}
 			}
 		}
+		var platformOptions = document.querySelectorAll(".platform-option");
+		platformOptions.forEach(function(option) {
+			option.classList.toggle("selected", option.id === id && isOpening);
+		});
 	}
 </script>
 <script type="text/javascript">
 	let toggleBtn = document.getElementById("mode-toggle-btn")
 	toggleBtn.onclick = setMode;
-	
+
 	if (localStorage.getItem("mode") === null) {
     	localStorage.setItem("mode", "dark-mode");
     }
@@ -1669,18 +1738,23 @@ We interact daily over Slack, and have an open source project meeting everyday, 
 	const currentMode = localStorage.getItem("mode");
 	if (isDark ^ (currentMode === "dark-mode")) {
 		setMode();
+	} else {
+		// Body already matches the stored theme, so setMode() is not called here.
+		// Sync every theme-aware logo to the current theme so logos that render
+		// after the header script (such as #l5-logo) show the correct image on
+		// load instead of waiting for a manual toggle.
+		document.querySelectorAll("#logo-dark-light, .logo-dark-light").forEach(e => {
+			e.src = document.body.classList.contains("dark-mode") ? e.dataset.logoForDark : e.dataset.logoForLight;
+		});
 	}
 
 	function setMode() {
 		document.body.classList.toggle("dark-mode")
-		
-		let l5Logos = document.querySelectorAll("#l5-logo");
-		let allLogos = document.querySelectorAll("#logo-dark-light");
+
+		let allLogos = document.querySelectorAll("#logo-dark-light, .logo-dark-light");
 		if (document.body.classList.contains("dark-mode")) {
-			l5Logos.forEach(e => e.src = '../assets/images/company-logo/dark-mode-logo.svg')
 			allLogos.forEach(e => e.src = e.dataset.logoForDark)
 		} else {
-			l5Logos.forEach(e => e.src = '../assets/images/company-logo/no-trim.svg')
 			allLogos.forEach(e => e.src = e.dataset.logoForLight)
 		}
 		if (document.body.classList.contains("dark-mode")) {
@@ -1693,7 +1767,7 @@ We interact daily over Slack, and have an open source project meeting everyday, 
 			bubbles: true ,
 		}))
 	}
-	
+
 </script>
 
 <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
@@ -1710,7 +1784,7 @@ We interact daily over Slack, and have an open source project meeting everyday, 
       slidesToScroll: 1,
       autoplay: true, // true
       autoplaySpeed: 1500,
-      
+
 
       responsive: [
         {

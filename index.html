@@ -6,9 +6,8 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="test" content="testing" />
     <!-- Google Tag Manager -->
-    <meta name="description" content="" />
+    
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
@@ -64,7 +63,6 @@
     
 
     <meta name="twitter:card" content="summary_large_image" />
-    <meta property="twitter:title" content="Meshery" />
     <meta name="twitter:site" content="@mesheryio" />
     <meta name="twitter:creator" content="@mesheryio" />
     <meta name="author" content="Meshery Authors">
@@ -90,13 +88,13 @@
         if (localStorage.getItem("mode") === "light-mode") {
           body.classList.remove("dark-mode");
     
-          let allLogos = document.querySelectorAll("#logo-dark-light");
+          let allLogos = document.querySelectorAll("#logo-dark-light, .logo-dark-light");
           allLogos.forEach(e => e.src = e.dataset.logoForLight);
         }
     
         // Automatically set logos based on initial theme
-        window.addEventListener('load', () => {
-          let allLogos = document.querySelectorAll("#logo-dark-light");
+        document.addEventListener('DOMContentLoaded', () => {
+          let allLogos = document.querySelectorAll("#logo-dark-light, .logo-dark-light");
           allLogos.forEach(e => {
             e.src = body.classList.contains("dark-mode") ? e.dataset.logoForDark : e.dataset.logoForLight;
           });
@@ -221,6 +219,8 @@
 							
 					
 							
+					
+							
 				<a href="/community
 "   class="nav-text"
 					>
@@ -318,9 +318,21 @@
 						<div  class="sub-nav-li" >
 								<img class="nav-img" src="/assets/images/nav-icons/Discuss.svg
 ">
-							<a href="/community#discussion-forums
+							<a href="https://discuss.meshery.io
 " 
 							class="subnav-item">Discussion forums
+							
+							</a>
+						</div>
+					</li>
+					
+					<li >
+						<div  class="sub-nav-li" >
+								<img class="nav-img" src="/assets/images/nav-icons/Leaderboard.svg
+">
+							<a href="/community/leaderboard
+" 
+							class="subnav-item">Leaderboard
 							
 							</a>
 						</div>
@@ -594,8 +606,8 @@
 		<h1 style="margin: 0rem 0rem 1rem 0rem;">the <span class="special-text" style="animation-delay: .5s;">
 				extensible</span> engineering platform</h1>
 		<div class="video-box">
-			 <a href="/assets/videos/meshery-dashboard-hero-image.png" data-fancybox="images" data-caption="Meshery dashboard" title="Meshery Dashboard">
-				<img class="hero-preview-image" src="/assets/videos/meshery-dashboard-hero-image.png"
+			 <a href="/assets/videos/meshery-dashboard-hero-image.webp" data-fancybox="images" data-caption="Meshery dashboard" title="Meshery Dashboard">
+				<img class="hero-preview-image" src="/assets/videos/meshery-dashboard-hero-image.webp"
 					alt="Meshery dashboard preview" loading="eager" />
 			</a>
 		</div>
@@ -1652,6 +1664,49 @@
    
             
               MESHERY419d
+            
+          </span>
+        </h6>
+      </div> 
+      <div class="back">
+        
+      </div>
+    </div>
+  </div>  
+</a>
+
+        </div>
+           
+                <div class="column column-lg patternCard designs responsive-card" filter="Hello_Wasm_config" type="deployment"
+                patternType="designs"
+                technology='["dapr"]' status=""
+                style="display: none;">
+                
+
+<a href="/catalog/deployment/hello-wasm-config-109bc209-677b-461b-a580-e049bb83ce65.html">
+<div class= "card link">  
+    <div class="card-inner">
+      <div class="front">
+        <div class="chip" style=" background-color: var(--brand-color-primary);">
+          <small class="pattern-type"> DEPLOYMENT</small>
+        </div>
+        <h4 class="pattern-name">Hello_Wasm_config</h4>
+        <div class="pattern-image-container">
+          <img class= "pattern-image" 
+          data-snapshot-light="https://raw.githubusercontent.com/meshery-extensions/meshery-extensions-packages/master/action-assets/design-assets/109bc209-677b-461b-a580-e049bb83ce65-light.png"
+          data-snapshot-dark="https://raw.githubusercontent.com/meshery-extensions/meshery-extensions-packages/master/action-assets/design-assets/109bc209-677b-461b-a580-e049bb83ce65-light.png"
+          src="https://raw.githubusercontent.com/meshery-extensions/meshery-extensions-packages/master/action-assets/design-assets/109bc209-677b-461b-a580-e049bb83ce65-light.png"
+          onerror="this.src='/assets/images/logos/service-mesh-pattern.svg'; this.style.width = '40%'"
+          loading="lazy"/>
+        </div>
+        <h6 class="pattern-id">
+          
+          <span id="patId109bc209-677b-461b-a580-e049bb83ce65" class="pat">
+            
+            
+   
+            
+              MESHERY461b
             
           </span>
         </h6>
@@ -3342,6 +3397,49 @@
 
         </div>
            
+                <div class="column column-lg patternCard designs responsive-card" filter="NGINX Demo" type="deployment"
+                patternType="designs"
+                technology='["kubernetes"]' status=""
+                style="display: none;">
+                
+
+<a href="/catalog/deployment/nginx-demo-31609ad4-0d41-4a06-9a65-bc8a7304f9b3.html">
+<div class= "card link">  
+    <div class="card-inner">
+      <div class="front">
+        <div class="chip" style=" background-color: var(--brand-color-primary);">
+          <small class="pattern-type"> DEPLOYMENT</small>
+        </div>
+        <h4 class="pattern-name">NGINX Demo</h4>
+        <div class="pattern-image-container">
+          <img class= "pattern-image" 
+          data-snapshot-light="https://raw.githubusercontent.com/meshery-extensions/meshery-extensions-packages/master/action-assets/design-assets/31609ad4-0d41-4a06-9a65-bc8a7304f9b3-light.png"
+          data-snapshot-dark="https://raw.githubusercontent.com/meshery-extensions/meshery-extensions-packages/master/action-assets/design-assets/31609ad4-0d41-4a06-9a65-bc8a7304f9b3-light.png"
+          src="https://raw.githubusercontent.com/meshery-extensions/meshery-extensions-packages/master/action-assets/design-assets/31609ad4-0d41-4a06-9a65-bc8a7304f9b3-light.png"
+          onerror="this.src='/assets/images/logos/service-mesh-pattern.svg'; this.style.width = '40%'"
+          loading="lazy"/>
+        </div>
+        <h6 class="pattern-id">
+          
+          <span id="patId31609ad4-0d41-4a06-9a65-bc8a7304f9b3" class="pat">
+            
+            
+   
+            
+              MESHERY4a06
+            
+          </span>
+        </h6>
+      </div> 
+      <div class="back">
+        
+      </div>
+    </div>
+  </div>  
+</a>
+
+        </div>
+           
                 <div class="column column-lg patternCard designs responsive-card" filter="Hierarchical-Parent-Inventory-Relationship" type="deployment"
                 patternType="designs"
                 technology='["kubernetes"]' status=""
@@ -3845,6 +3943,49 @@
    
             
               MESHERY4534
+            
+          </span>
+        </h6>
+      </div> 
+      <div class="back">
+        
+      </div>
+    </div>
+  </div>  
+</a>
+
+        </div>
+           
+                <div class="column column-lg patternCard designs responsive-card" filter="Twenty CRM Deployment" type="deployment"
+                patternType="designs"
+                technology='["kubernetes"]' status=""
+                style="display: none;">
+                
+
+<a href="/catalog/deployment/twenty-crm-deployment-399b0c21-639b-4051-94e5-80317d9dc719.html">
+<div class= "card link">  
+    <div class="card-inner">
+      <div class="front">
+        <div class="chip" style=" background-color: var(--brand-color-primary);">
+          <small class="pattern-type"> DEPLOYMENT</small>
+        </div>
+        <h4 class="pattern-name">Twenty CRM Deployment</h4>
+        <div class="pattern-image-container">
+          <img class= "pattern-image" 
+          data-snapshot-light="https://raw.githubusercontent.com/meshery-extensions/meshery-extensions-packages/master/action-assets/design-assets/399b0c21-639b-4051-94e5-80317d9dc719-light.png"
+          data-snapshot-dark="https://raw.githubusercontent.com/meshery-extensions/meshery-extensions-packages/master/action-assets/design-assets/399b0c21-639b-4051-94e5-80317d9dc719-light.png"
+          src="https://raw.githubusercontent.com/meshery-extensions/meshery-extensions-packages/master/action-assets/design-assets/399b0c21-639b-4051-94e5-80317d9dc719-light.png"
+          onerror="this.src='/assets/images/logos/service-mesh-pattern.svg'; this.style.width = '40%'"
+          loading="lazy"/>
+        </div>
+        <h6 class="pattern-id">
+          
+          <span id="patId399b0c21-639b-4051-94e5-80317d9dc719" class="pat">
+            
+            
+   
+            
+              MESHERY4051
             
           </span>
         </h6>
@@ -5320,6 +5461,49 @@
 
         </div>
            
+                <div class="column column-lg patternCard designs responsive-card" filter="DigitalOcean Icons Showcase" type="deployment"
+                patternType="designs"
+                technology='["digitalocean-icons"]' status=""
+                style="display: none;">
+                
+
+<a href="/catalog/deployment/digitalocean-icons-showcase-574aecfa-2aa4-4a8e-b88a-cc8397734f33.html">
+<div class= "card link">  
+    <div class="card-inner">
+      <div class="front">
+        <div class="chip" style=" background-color: var(--brand-color-primary);">
+          <small class="pattern-type"> DEPLOYMENT</small>
+        </div>
+        <h4 class="pattern-name">DigitalOcean Icons Showcase</h4>
+        <div class="pattern-image-container">
+          <img class= "pattern-image" 
+          data-snapshot-light="https://raw.githubusercontent.com/meshery-extensions/meshery-extensions-packages/master/action-assets/design-assets/574aecfa-2aa4-4a8e-b88a-cc8397734f33-light.png"
+          data-snapshot-dark="https://raw.githubusercontent.com/meshery-extensions/meshery-extensions-packages/master/action-assets/design-assets/574aecfa-2aa4-4a8e-b88a-cc8397734f33-light.png"
+          src="https://raw.githubusercontent.com/meshery-extensions/meshery-extensions-packages/master/action-assets/design-assets/574aecfa-2aa4-4a8e-b88a-cc8397734f33-light.png"
+          onerror="this.src='/assets/images/logos/service-mesh-pattern.svg'; this.style.width = '40%'"
+          loading="lazy"/>
+        </div>
+        <h6 class="pattern-id">
+          
+          <span id="patId574aecfa-2aa4-4a8e-b88a-cc8397734f33" class="pat">
+            
+            
+   
+            
+              MESHERY4a8e
+            
+          </span>
+        </h6>
+      </div> 
+      <div class="back">
+        
+      </div>
+    </div>
+  </div>  
+</a>
+
+        </div>
+           
                 <div class="column column-lg patternCard designs responsive-card" filter="Mattermost Cluster Install" type="deployment"
                 patternType="designs"
                 technology='["kubernetes"]' status=""
@@ -5823,6 +6007,49 @@
    
             
               MESHERY4a65
+            
+          </span>
+        </h6>
+      </div> 
+      <div class="back">
+        
+      </div>
+    </div>
+  </div>  
+</a>
+
+        </div>
+           
+                <div class="column column-lg patternCard designs responsive-card" filter="Untitled Design" type="deployment"
+                patternType="designs"
+                technology='["kubevela"]' status=""
+                style="display: none;">
+                
+
+<a href="/catalog/deployment/untitled-design-66ca6523-f21c-4fc1-a247-fa32f0ad753b.html">
+<div class= "card link">  
+    <div class="card-inner">
+      <div class="front">
+        <div class="chip" style=" background-color: var(--brand-color-primary);">
+          <small class="pattern-type"> DEPLOYMENT</small>
+        </div>
+        <h4 class="pattern-name">Untitled Design</h4>
+        <div class="pattern-image-container">
+          <img class= "pattern-image" 
+          data-snapshot-light="https://raw.githubusercontent.com/meshery-extensions/meshery-extensions-packages/master/action-assets/design-assets/66ca6523-f21c-4fc1-a247-fa32f0ad753b-light.png"
+          data-snapshot-dark="https://raw.githubusercontent.com/meshery-extensions/meshery-extensions-packages/master/action-assets/design-assets/66ca6523-f21c-4fc1-a247-fa32f0ad753b-light.png"
+          src="https://raw.githubusercontent.com/meshery-extensions/meshery-extensions-packages/master/action-assets/design-assets/66ca6523-f21c-4fc1-a247-fa32f0ad753b-light.png"
+          onerror="this.src='/assets/images/logos/service-mesh-pattern.svg'; this.style.width = '40%'"
+          loading="lazy"/>
+        </div>
+        <h6 class="pattern-id">
+          
+          <span id="patId66ca6523-f21c-4fc1-a247-fa32f0ad753b" class="pat">
+            
+            
+   
+            
+              MESHERY4fc1
             
           </span>
         </h6>
@@ -6382,6 +6609,49 @@
    
             
               MESHERY45c1
+            
+          </span>
+        </h6>
+      </div> 
+      <div class="back">
+        
+      </div>
+    </div>
+  </div>  
+</a>
+
+        </div>
+           
+                <div class="column column-lg patternCard designs responsive-card" filter="Aws design -copy" type="deployment"
+                patternType="designs"
+                technology='["aws-cloudtrail-controller"]' status=""
+                style="display: none;">
+                
+
+<a href="/catalog/deployment/aws-design-copy-73435d9c-c8bc-4527-b0c2-91b8dc212eb5.html">
+<div class= "card link">  
+    <div class="card-inner">
+      <div class="front">
+        <div class="chip" style=" background-color: var(--brand-color-primary);">
+          <small class="pattern-type"> DEPLOYMENT</small>
+        </div>
+        <h4 class="pattern-name">Aws design -copy</h4>
+        <div class="pattern-image-container">
+          <img class= "pattern-image" 
+          data-snapshot-light="https://raw.githubusercontent.com/meshery-extensions/meshery-extensions-packages/master/action-assets/design-assets/73435d9c-c8bc-4527-b0c2-91b8dc212eb5-light.png"
+          data-snapshot-dark="https://raw.githubusercontent.com/meshery-extensions/meshery-extensions-packages/master/action-assets/design-assets/73435d9c-c8bc-4527-b0c2-91b8dc212eb5-light.png"
+          src="https://raw.githubusercontent.com/meshery-extensions/meshery-extensions-packages/master/action-assets/design-assets/73435d9c-c8bc-4527-b0c2-91b8dc212eb5-light.png"
+          onerror="this.src='/assets/images/logos/service-mesh-pattern.svg'; this.style.width = '40%'"
+          loading="lazy"/>
+        </div>
+        <h6 class="pattern-id">
+          
+          <span id="patId73435d9c-c8bc-4527-b0c2-91b8dc212eb5" class="pat">
+            
+            
+   
+            
+              MESHERY4527
             
           </span>
         </h6>
@@ -8889,6 +9159,49 @@
 
         </div>
            
+                <div class="column column-lg patternCard designs responsive-card" filter="Registry-Grounded AI Application Infrastructure" type="deployment"
+                patternType="designs"
+                technology='["kubernetes"]' status=""
+                style="display: none;">
+                
+
+<a href="/catalog/deployment/registry-grounded-ai-application-infrastructure-b046745b-215d-4e21-80c8-00ada44f73f8.html">
+<div class= "card link">  
+    <div class="card-inner">
+      <div class="front">
+        <div class="chip" style=" background-color: var(--brand-color-primary);">
+          <small class="pattern-type"> DEPLOYMENT</small>
+        </div>
+        <h4 class="pattern-name">Registry-Grounded AI Application Infrastructure</h4>
+        <div class="pattern-image-container">
+          <img class= "pattern-image" 
+          data-snapshot-light="https://raw.githubusercontent.com/meshery-extensions/meshery-extensions-packages/master/action-assets/design-assets/b046745b-215d-4e21-80c8-00ada44f73f8-light.png"
+          data-snapshot-dark="https://raw.githubusercontent.com/meshery-extensions/meshery-extensions-packages/master/action-assets/design-assets/b046745b-215d-4e21-80c8-00ada44f73f8-light.png"
+          src="https://raw.githubusercontent.com/meshery-extensions/meshery-extensions-packages/master/action-assets/design-assets/b046745b-215d-4e21-80c8-00ada44f73f8-light.png"
+          onerror="this.src='/assets/images/logos/service-mesh-pattern.svg'; this.style.width = '40%'"
+          loading="lazy"/>
+        </div>
+        <h6 class="pattern-id">
+          
+          <span id="patIdb046745b-215d-4e21-80c8-00ada44f73f8" class="pat">
+            
+            
+   
+            
+              MESHERY4e21
+            
+          </span>
+        </h6>
+      </div> 
+      <div class="back">
+        
+      </div>
+    </div>
+  </div>  
+</a>
+
+        </div>
+           
                 <div class="column column-lg patternCard designs responsive-card" filter="[Tutorial] Exploring Kubernetes Pods With Meshery" type="deployment"
                 patternType="designs"
                 technology='["kubernetes"]' status=""
@@ -9005,6 +9318,92 @@
    
             
               MESHERY473d
+            
+          </span>
+        </h6>
+      </div> 
+      <div class="back">
+        
+      </div>
+    </div>
+  </div>  
+</a>
+
+        </div>
+           
+                <div class="column column-lg patternCard designs responsive-card" filter="DevOps K8s CI/CD Platform" type="deployment"
+                patternType="designs"
+                technology='["kubernetes"]' status=""
+                style="display: none;">
+                
+
+<a href="/catalog/deployment/devops-k8s-ci-cd-platform-b6d2e6ee-b6e9-408b-ac58-9f8062f6ff36.html">
+<div class= "card link">  
+    <div class="card-inner">
+      <div class="front">
+        <div class="chip" style=" background-color: var(--brand-color-primary);">
+          <small class="pattern-type"> DEPLOYMENT</small>
+        </div>
+        <h4 class="pattern-name">DevOps K8s CI/CD Platform</h4>
+        <div class="pattern-image-container">
+          <img class= "pattern-image" 
+          data-snapshot-light="https://raw.githubusercontent.com/meshery-extensions/meshery-extensions-packages/master/action-assets/design-assets/b6d2e6ee-b6e9-408b-ac58-9f8062f6ff36-light.png"
+          data-snapshot-dark="https://raw.githubusercontent.com/meshery-extensions/meshery-extensions-packages/master/action-assets/design-assets/b6d2e6ee-b6e9-408b-ac58-9f8062f6ff36-light.png"
+          src="https://raw.githubusercontent.com/meshery-extensions/meshery-extensions-packages/master/action-assets/design-assets/b6d2e6ee-b6e9-408b-ac58-9f8062f6ff36-light.png"
+          onerror="this.src='/assets/images/logos/service-mesh-pattern.svg'; this.style.width = '40%'"
+          loading="lazy"/>
+        </div>
+        <h6 class="pattern-id">
+          
+          <span id="patIdb6d2e6ee-b6e9-408b-ac58-9f8062f6ff36" class="pat">
+            
+            
+   
+            
+              MESHERY408b
+            
+          </span>
+        </h6>
+      </div> 
+      <div class="back">
+        
+      </div>
+    </div>
+  </div>  
+</a>
+
+        </div>
+           
+                <div class="column column-lg patternCard designs responsive-card" filter="config.yaml" type="deployment"
+                patternType="designs"
+                technology='["aws-cloudtrail-controller"]' status=""
+                style="display: none;">
+                
+
+<a href="/catalog/deployment/config-yaml-b95f6d26-e5ed-43c9-93a8-1fa15bdbfa4d.html">
+<div class= "card link">  
+    <div class="card-inner">
+      <div class="front">
+        <div class="chip" style=" background-color: var(--brand-color-primary);">
+          <small class="pattern-type"> DEPLOYMENT</small>
+        </div>
+        <h4 class="pattern-name">config.yaml</h4>
+        <div class="pattern-image-container">
+          <img class= "pattern-image" 
+          data-snapshot-light="https://raw.githubusercontent.com/meshery-extensions/meshery-extensions-packages/master/action-assets/design-assets/b95f6d26-e5ed-43c9-93a8-1fa15bdbfa4d-light.png"
+          data-snapshot-dark="https://raw.githubusercontent.com/meshery-extensions/meshery-extensions-packages/master/action-assets/design-assets/b95f6d26-e5ed-43c9-93a8-1fa15bdbfa4d-light.png"
+          src="https://raw.githubusercontent.com/meshery-extensions/meshery-extensions-packages/master/action-assets/design-assets/b95f6d26-e5ed-43c9-93a8-1fa15bdbfa4d-light.png"
+          onerror="this.src='/assets/images/logos/service-mesh-pattern.svg'; this.style.width = '40%'"
+          loading="lazy"/>
+        </div>
+        <h6 class="pattern-id">
+          
+          <span id="patIdb95f6d26-e5ed-43c9-93a8-1fa15bdbfa4d" class="pat">
+            
+            
+   
+            
+              MESHERY43c9
             
           </span>
         </h6>
@@ -10136,6 +10535,49 @@
 
         </div>
            
+                <div class="column column-lg patternCard designs responsive-card" filter="Kubernetes Web Application" type="deployment"
+                patternType="designs"
+                technology='["kubernetes"]' status=""
+                style="display: none;">
+                
+
+<a href="/catalog/deployment/kubernetes-web-application-dd2df8a1-163e-4694-a8de-54191eb82d77.html">
+<div class= "card link">  
+    <div class="card-inner">
+      <div class="front">
+        <div class="chip" style=" background-color: var(--brand-color-primary);">
+          <small class="pattern-type"> DEPLOYMENT</small>
+        </div>
+        <h4 class="pattern-name">Kubernetes Web Application</h4>
+        <div class="pattern-image-container">
+          <img class= "pattern-image" 
+          data-snapshot-light="https://raw.githubusercontent.com/meshery-extensions/meshery-extensions-packages/master/action-assets/design-assets/dd2df8a1-163e-4694-a8de-54191eb82d77-light.png"
+          data-snapshot-dark="https://raw.githubusercontent.com/meshery-extensions/meshery-extensions-packages/master/action-assets/design-assets/dd2df8a1-163e-4694-a8de-54191eb82d77-light.png"
+          src="https://raw.githubusercontent.com/meshery-extensions/meshery-extensions-packages/master/action-assets/design-assets/dd2df8a1-163e-4694-a8de-54191eb82d77-light.png"
+          onerror="this.src='/assets/images/logos/service-mesh-pattern.svg'; this.style.width = '40%'"
+          loading="lazy"/>
+        </div>
+        <h6 class="pattern-id">
+          
+          <span id="patIddd2df8a1-163e-4694-a8de-54191eb82d77" class="pat">
+            
+            
+   
+            
+              MESHERY4694
+            
+          </span>
+        </h6>
+      </div> 
+      <div class="back">
+        
+      </div>
+    </div>
+  </div>  
+</a>
+
+        </div>
+           
                 <div class="column column-lg patternCard designs responsive-card" filter="Amazon Web Services IoT Architecture Diagram" type="deployment"
                 patternType="designs"
                 technology='["aws-api-gateway-operator","aws-vpc-cni","aws-eks-controller","aws-cloudwatch-controller"]' status=""
@@ -10811,6 +11253,49 @@
    
             
               MESHERY4263
+            
+          </span>
+        </h6>
+      </div> 
+      <div class="back">
+        
+      </div>
+    </div>
+  </div>  
+</a>
+
+        </div>
+           
+                <div class="column column-lg patternCard designs responsive-card" filter="[Tutorial] Exploring Kubernetes Pod" type="deployment"
+                patternType="designs"
+                technology='["kubernetes"]' status=""
+                style="display: none;">
+                
+
+<a href="/catalog/deployment/tutorial-exploring-kubernetes-pod-ebcd2901-d0dd-46ce-b927-07f51033a38c.html">
+<div class= "card link">  
+    <div class="card-inner">
+      <div class="front">
+        <div class="chip" style=" background-color: var(--brand-color-primary);">
+          <small class="pattern-type"> DEPLOYMENT</small>
+        </div>
+        <h4 class="pattern-name">[Tutorial] Exploring Kubernetes Pod</h4>
+        <div class="pattern-image-container">
+          <img class= "pattern-image" 
+          data-snapshot-light="https://raw.githubusercontent.com/meshery-extensions/meshery-extensions-packages/master/action-assets/design-assets/ebcd2901-d0dd-46ce-b927-07f51033a38c-light.png"
+          data-snapshot-dark="https://raw.githubusercontent.com/meshery-extensions/meshery-extensions-packages/master/action-assets/design-assets/ebcd2901-d0dd-46ce-b927-07f51033a38c-light.png"
+          src="https://raw.githubusercontent.com/meshery-extensions/meshery-extensions-packages/master/action-assets/design-assets/ebcd2901-d0dd-46ce-b927-07f51033a38c-light.png"
+          onerror="this.src='/assets/images/logos/service-mesh-pattern.svg'; this.style.width = '40%'"
+          loading="lazy"/>
+        </div>
+        <h6 class="pattern-id">
+          
+          <span id="patIdebcd2901-d0dd-46ce-b927-07f51033a38c" class="pat">
+            
+            
+   
+            
+              MESHERY46ce
             
           </span>
         </h6>
@@ -16349,7 +16834,7 @@
     <p class="small">Watch community meeting recordings on our YouTube channel</p>
     <div class="go-corner"></div>
   </a>
-   <a class="card" href="/community#discussion-forums" target="_blank">
+   <a class="card" href="https://discuss.meshery.io" target="_blank">
     <h3>Join the Conversation</h3>
     <p class="small">Ask questions, find answers and share knowledge on our Discussion Forum</p>
     <div class="go-corner"></div>
@@ -16374,87 +16859,83 @@
 <div class="container">
   <div class="text editable code">
     <div class="post-content row" itemprop="articleBody">
-      <div style="display: inline-flex; line-height: 40px">
-        <h1 class="step-number">01</h1>
-        <h2 class="step-heading">Use Meshery Playground</h2>
-      </div>
+      <h2 class="step-heading">Using Meshery Playground</h2>
       <p class="grey-bg-text" style="font-size: 1.15rem; margin-top: 5px;">
-        The fastest way to put your hands on Meshery is in its playground. No installation required. Just click and go! <div class="button-para"><a class="highlight" href="https://play.meshery.io">Use Meshery Playground</a></div>
+        The fastest way to put your hands on Meshery is in its playground. No installation required. Just click and go! 
+        <div class="button-para">
+          <a class="highlight" href="https://play.meshery.io">
+            Use Meshery Playground 
+            <i class="fas fa-external-link-alt external-icon" aria-hidden="true"></i></a></div>
       </p>
-      <hr />
-      <h2 class="step-heading" style="text-align: center;">OR</h2>
-      <hr />
-      <div style="display: inline-flex; line-height: 40px;">
-        <h1 class="step-number">01</h1>
-        <h2 class="step-heading">Choose Your Platform and Install</h2>
-      </div>
+      
+      <h2 class="step-heading">Using Your Platform Of Choice and Install</h2>
       <p class="grey-bg-text" style="font-size: 1.15rem; margin-top: 5px;">
         Choose a platform and see how easy it is to start managing cloud native infrastructure with a single command.
       </p>
       <div class="platformIcon">
-        <span class="tooltip" id="bash" style="margin: 0 20px 0px 0px; padding: 0.5rem;" onclick="displayCode(this.id)">
+        <span class="tooltip platform-option" id="bash" style="margin: 0 20px 0px 0px; padding: 0.7rem;" onclick="displayCode(this.id)">
           <img id="bounce"
             src="/assets/images/logos/bash.png"
             alt="Bash User"
             loading="lazy">
           <span class="tooltiptext">Bash User</span>
         </span>
-        <span class="tooltip" id="brew" style="margin: 0px 20px 0px 0px; padding: 0.5rem;" onclick="displayCode(this.id)">
+        <span class="tooltip platform-option" id="brew" style="margin: 0px 20px 0px 0px; padding: 0.7rem;" onclick="displayCode(this.id)">
           <img id="bounce"
             src="/assets/images/logos/homebrew.png" alt="Brew User"
             loading="lazy">
           <span class="tooltiptext">Brew User</span>
         </span>
-        <span class="tooltip" id="docker" style="margin: 0px 20px 0px 0px; padding: 0.5rem;" onclick="displayCode(this.id)">
+        <span class="tooltip platform-option" id="docker" style="margin: 0px 20px 0px 0px; padding: 0.7rem;" onclick="displayCode(this.id)">
           <img id="bounceDocker"
             src="/assets/images/logos/docker.png" alt="Docker User"
             loading="lazy">
             <span class="tooltiptext">Docker User</span>
         </span>
-        <span class="tooltip" id="k8s-instructions" style="margin: 0 20px 0px 0px; padding: 0.5rem;" onclick="displayCode(this.id)">
+        <span class="tooltip platform-option" id="k8s-instructions" style="margin: 0 20px 0px 0px; padding: 0.7rem;" onclick="displayCode(this.id)">
           <img id="bounce"
             src="/assets/images/logos/kubernetes.png"
             alt="Kubernetes User"
             loading="lazy">
           <span class="tooltiptext">Kubernetes User</span>
         </span>
-        <span class="tooltip" id="windows" style="margin: 0px 20px 0px 0px; padding: 0.5rem;" onclick="displayCode(this.id)">
+        <span class="tooltip platform-option" id="windows" style="margin: 0px 20px 0px 0px; padding: 0.7rem;" onclick="displayCode(this.id)">
           <img id="bounce"
             src="/assets/images/logos/windows_logo.png" alt="Windows User"
             loading="lazy">
           <span class="tooltiptext">Windows User</span>
         </span>
-        <span class="tooltip" id="google_kubernetes" style="margin: 0px 20px 0px 0px; padding: 0.5rem;" onclick="displayCode(this.id)">
+        <span class="tooltip platform-option" id="google_kubernetes" style="margin: 0px 20px 0px 0px; padding: 0.7rem;" onclick="displayCode(this.id)">
           <img id="bounce"
             src="/assets/images/logos/google_kubernetes.png" alt="Google Kubernetes"
             loading="lazy">
           <span class="tooltiptext">Google Kubernetes</span>
         </span>
-        <span class="tooltip" id="aws_elastic" style="margin: 0px 20px 0px 0px; padding: 0.5rem;" onclick="displayCode(this.id)">
+        <span class="tooltip platform-option" id="aws_elastic" style="margin: 0px 20px 0px 0px; padding: 0.7rem;" onclick="displayCode(this.id)">
           <img id="bounce"
             src="/assets/images/logos/aws_elastic.jpeg" alt="AWS Elastic Kubernetes"
             loading="lazy">
           <span class="tooltiptext">AWS Elastic Kubernetes</span>
         </span>
-        <span class="tooltip" id="aks" style="margin: 0px 20px 0px 0px; padding: 0.5rem;" onclick="displayCode(this.id)">
+        <span class="tooltip platform-option" id="aks" style="margin: 0px 20px 0px 0px; padding: 0.7rem;" onclick="displayCode(this.id)">
           <img id="bounce"
             src="/assets/images/logos/aks.png" alt="AKS"
             loading="lazy">
           <span class="tooltiptext">AKS</span>
         </span>
-        <span class="tooltip" id="minikube" style="margin: 0px 20px 0px 0px; padding: 0.5rem;" onclick="displayCode(this.id)">
+        <span class="tooltip platform-option" id="minikube" style="margin: 0px 20px 0px 0px; padding: 0.7rem;" onclick="displayCode(this.id)">
           <img id="bounce"
             src="/assets/images/logos/minikube.png" alt="Minikube"
             loading="lazy">
           <span class="tooltiptext">Minikube</span>
         </span>
-        <!-- <span class="tooltip" id="kind" style="margin: 0px 20px 0px 0px; padding: 0.5rem;" onclick="displayCode(this.id)">
+        <!-- <span class="tooltip platform-option" id="kind" style="margin: 0px 20px 0px 0px; padding: 0.7rem;" onclick="displayCode(this.id)">
           <img id="bounce"
             src="/assets/images/logos/kind.png" style="width: 90px;" alt="KinD"
             loading="lazy">
           <span class="tooltiptext">KinD</span> -->
         </span>
-        <span class="tooltip" id="helm" style="margin: 0px 20px 0px 0px; padding: 0.5rem;" onclick="displayCode(this.id)">
+        <span class="tooltip platform-option" id="helm" style="margin: 0px 20px 0px 0px; padding: 0.7rem;" onclick="displayCode(this.id)">
           <img id="bounce"
             src="/assets/images/logos/helm.png" alt="Helm"
             loading="lazy">
@@ -16745,7 +17226,7 @@ mesheryctl system start"
               helm install meshery meshery/meshery -n meshery
             </code>
               <!-- copy to clipboard -->
-              <!-- <a class="btn tooltip" style="position: absolute; top:0.10rem; right: 0.5rem; font-size: 22px;" data-clipboard-target="#start-helm-v3"
+              <!-- <a class="btn tooltip" style="position: absolute; top:0.10rem; right: 0.7rem; font-size: 22px;" data-clipboard-target="#start-helm-v3"
                 data-clipboard-text="kubectl create ns meshery
                 helm repo add meshery https://meshery.io/charts/
                 helm install meshery meshery/meshery -n meshery" onmouseout="resetCopyText(this)">
@@ -16760,7 +17241,7 @@ mesheryctl system start"
                 $ kubectl create ns meshery
                 $ kubectl -n meshery apply -f install/deployment_yamls/k8s</code>
               <!-- copy to clipboard -->
-              <!-- <a class="btn tooltip" style="position: absolute; top:0.10rem; right: 0.5rem; font-size: 22px;" data-clipboard-target="#start-k8s-in-cluster"
+              <!-- <a class="btn tooltip" style="position: absolute; top:0.10rem; right: 0.7rem; font-size: 22px;" data-clipboard-target="#start-k8s-in-cluster"
                 data-clipboard-text="git clone https://github.com/meshery/meshery.git; cd meshery
 kubectl create ns meshery
 kubectl -n meshery apply -f install/deployment_yamls/k8s" onmouseout="resetCopyText(this)">
@@ -16863,14 +17344,7 @@ mesheryctl system start"
             </div>
         </div>
       </div>
-
-      <hr />
           
-      <div class="login" style="display: inline-flex; line-height: 40px; ">
-        <h1 class="step-number" style="margin-right: 0.5rem">02</h1>
-        <h2 class="step-heading">Manage your Cloud Native Infra</h2>
-      </div>
-      <p class="grey-bg-text" style="margin-left: 0px; font-size: 1.15rem;">There is no step 2. Login and manage cloud native infrastructure! For more detailed instructions, visit <a href="https://docs.meshery.io/installation">Meshery Docs</a>. </p>
     </div>
   </div>
 </div>
@@ -16893,7 +17367,7 @@ mesheryctl system start"
             <div class="type-one-quote-meta">
               <div class="type-one-meta-info">
                 <div class="type-one-author"><cite>Louie Corbo</cite></div>
-                <div class="type-one-source"><span>Staff Cloud Infratructure Engineer at SADA</span></div>
+                <div class="type-one-source"><span>Staff Cloud Infrastructure Engineer at SADA</span></div>
               </div>
             </div>
           </div>
@@ -17162,7 +17636,7 @@ mesheryctl system start"
 			<span class="project-caption">
 				Created by
 				<a href="https://layer5.io" target="_blank" rel="noopener noreferrer">
-					<img id="l5-logo" src="/assets/images/company-logo/no-trim.svg"
+					<img id="l5-logo" class="logo-dark-light" src="/assets/images/company-logo/dark-mode-logo.svg" data-logo-for-dark="/assets/images/company-logo/dark-mode-logo.svg" data-logo-for-light="/assets/images/company-logo/no-trim.svg"
 						alt="Logo" />
 				</a>
 				and its open source community.
@@ -17204,7 +17678,7 @@ mesheryctl system start"
 				<li>
 					<h2>
 						
-						<a target="_blank"  
+						<a target="_blank" 
 						href="/community
 " class="community-icon" >
 						
@@ -17260,7 +17734,7 @@ mesheryctl system start"
 						Internships</a></li>
 				
 				<li><a target="_blank" 
-						href="/community#discussion-forums
+						href="https://discuss.meshery.io
 " class="forum-icon" >
 						
 						
@@ -17276,7 +17750,7 @@ mesheryctl system start"
 				<li>
 					<h2>
 						
-						<a  
+						<a 
 						href="/#getting-started
 " >
 						
@@ -17314,7 +17788,7 @@ mesheryctl system start"
 				<li>
 					<h2>
 						
-						<a  
+						<a 
 						href="/community#resources
 " >
 						
@@ -17449,7 +17923,7 @@ mesheryctl system start"
 			</ul>
 			
 
-			<!-- 
+			<!--
 			<ul class="feed">
 				<a class="twitter-timeline" data-width="320" data-height="320" data-theme="light"
 					data-link-color="#62ACCD" href="https://twitter.com/mesheryio"
@@ -17490,6 +17964,27 @@ mesheryctl system start"
 
 <script>
 
+    // Functionality for the copy button next to the ID/UUID in Catalog Details
+
+	// function showCopyFeedback(element, message) {
+	// 	let wrapper = element.closest('.catalog-design-id-copy-wrapper');
+	// 	if (!wrapper) {
+	// 		return false;
+	// 	}
+
+	// 	let feedback = wrapper.querySelector('.copy-feedback');
+	// 	if (!feedback) {
+	// 		return false;
+	// 	}
+
+	// 	feedback.textContent = message;
+	// 	window.clearTimeout(element.copyFeedbackTimeout);
+	// 	element.copyFeedbackTimeout = window.setTimeout(function () {
+	// 		feedback.textContent = '';
+	// 	}, 1500);
+	// 	return true;
+	// }
+
 	function resetCopyText(element) {
 		let childElements = element.childNodes
 		if (childElements.length > 3) {
@@ -17508,18 +18003,23 @@ mesheryctl system start"
 		console.info('Text:', e.text);
 		console.info('Trigger:', e.trigger);
 		let childElements = e.trigger.childNodes;
-		if (childElements.length > 3) {
-		childElements[3].innerHTML = "Copied!";
-	} else {
-		childElements[1].innerHTML = "Copied";
-		childElements[1].style.color = 'white';
-		childElements[1].style.background = "#1a2421";
-	}
+        // ShowCopyFeedback serves as the primary check for the copy button in Catalog Details.
+        // If the copy button is enabled again, the conditional below needs to be encapsulate the childElements conditional
+		// if (!showCopyFeedback(e.trigger, "Copied!")) {}
+
+        if (childElements.length > 3) {
+			childElements[3].innerHTML = "Copied!";
+		} else {
+			childElements[1].innerHTML = "Copied";
+			childElements[1].style.color = 'white';
+			childElements[1].style.background = "#1a2421";
+		}
 		e.clearSelection();
 	});
 	clipboard.on('error', function (e) {
 		console.error('Action:', e.action);
 		console.error('Trigger:', e.trigger);
+		// showCopyFeedback(e.trigger, "Copy failed");
 	});
 </script>
 
@@ -17527,6 +18027,7 @@ mesheryctl system start"
 	function displayCode(id) {
 		var divId = id + "_code";
 		var element = document.getElementById(divId);
+		var isOpening = !element.classList.contains("showDiv");
 		element.classList.toggle("showDiv");
 		var toggleDivs = document.getElementsByClassName("toggle");
 		if (element.style.maxHeight) {
@@ -17542,12 +18043,16 @@ mesheryctl system start"
 				}
 			}
 		}
+		var platformOptions = document.querySelectorAll(".platform-option");
+		platformOptions.forEach(function(option) {
+			option.classList.toggle("selected", option.id === id && isOpening);
+		});
 	}
 </script>
 <script type="text/javascript">
 	let toggleBtn = document.getElementById("mode-toggle-btn")
 	toggleBtn.onclick = setMode;
-	
+
 	if (localStorage.getItem("mode") === null) {
     	localStorage.setItem("mode", "dark-mode");
     }
@@ -17556,18 +18061,23 @@ mesheryctl system start"
 	const currentMode = localStorage.getItem("mode");
 	if (isDark ^ (currentMode === "dark-mode")) {
 		setMode();
+	} else {
+		// Body already matches the stored theme, so setMode() is not called here.
+		// Sync every theme-aware logo to the current theme so logos that render
+		// after the header script (such as #l5-logo) show the correct image on
+		// load instead of waiting for a manual toggle.
+		document.querySelectorAll("#logo-dark-light, .logo-dark-light").forEach(e => {
+			e.src = document.body.classList.contains("dark-mode") ? e.dataset.logoForDark : e.dataset.logoForLight;
+		});
 	}
 
 	function setMode() {
 		document.body.classList.toggle("dark-mode")
-		
-		let l5Logos = document.querySelectorAll("#l5-logo");
-		let allLogos = document.querySelectorAll("#logo-dark-light");
+
+		let allLogos = document.querySelectorAll("#logo-dark-light, .logo-dark-light");
 		if (document.body.classList.contains("dark-mode")) {
-			l5Logos.forEach(e => e.src = '../assets/images/company-logo/dark-mode-logo.svg')
 			allLogos.forEach(e => e.src = e.dataset.logoForDark)
 		} else {
-			l5Logos.forEach(e => e.src = '../assets/images/company-logo/no-trim.svg')
 			allLogos.forEach(e => e.src = e.dataset.logoForLight)
 		}
 		if (document.body.classList.contains("dark-mode")) {
@@ -17580,7 +18090,7 @@ mesheryctl system start"
 			bubbles: true ,
 		}))
 	}
-	
+
 </script>
 
 <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
@@ -17597,7 +18107,7 @@ mesheryctl system start"
       slidesToScroll: 1,
       autoplay: true, // true
       autoplaySpeed: 1500,
-      
+
 
       responsive: [
         {
